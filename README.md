@@ -1,47 +1,55 @@
-**Mol2chemfig Web** is a web interface built on top of Mol2chemfig program maintained by [Prof. M. Palmer](http://science.uwaterloo.ca/~mpalmer/contact.html). The main goal of the project is to provide a user-friendly interface for generating and modifying chemical structures depicted in chemfig format for LaTeX documents. Web application includes the following features: 
+# Mol2chemfig Web
 
-**Integrated database search:**
+**Mol2chemfig Web** is a web interface for the **Mol2chemfig** program, which is maintained by [Prof. M. Palmer](https://www.soas.ac.uk/about/michael-palmer). The purpose of the project is to offer a user-friendly platform for generating and modifying chemical structures in the **chemfig** format for LaTeX documents. The web application includes the following features:
 
-Finds an inquired coumpound by name and returns a smiles string.
+## Features
 
-**Integrated Chemdoodle sketcher:**
+### **Integrated Database Search**
 
-If a requested compound was not found in the database, a user draws the structure in the [ChemDoodle sketcher](http://web.chemdoodle.com/tutorial/2d-structure-canvases/sketcher-canvas) and mol format will be generated.
+Search for a compound by name and retrieve its corresponding SMILES string.
 
-**Embeded pdfviewer:**
+### **Integrated ChemDoodle Sketcher**
 
-After converting of smiles or mol format to chemfig, a pdf file with a resulted structure will be displayed in the pdfviewer.
+If a compound is not found in the database, the user can draw its structure using the [ChemDoodle sketcher](http://web.chemdoodle.com/tutorial/2d-structure-canvases/sketcher-canvas). The resulting structure is then converted into MOL format.
 
-**"Select - Apply" functionality:**
+### **Embedded PDF Viewer**
 
-A user can modify the structure by selecting and applying desired options. A newly generated pdf displays all modifications. Currently ten options are present. Other options can be added upon request.
+Once a SMILES or MOL format is converted into chemfig, the generated structure is displayed in the embedded PDF viewer.
 
-**Live updates on chemfig code modifications:**
+### **"Select - Apply" Functionality**
 
-A user can modify chemfig code directly (i.e. to change the angle of a bond or to change a functional group). Every single modification is synchronized with pdfviewer.
+The user can modify the structure by selecting various options, which are then applied. The updated PDF reflects the changes. Currently, ten options are available, and more can be added upon request.
 
-##### Local installation
+### **Live Updates on Chemfig Code Modifications**
 
-If you want to run Mol2chemfig Web locally, you will need to install the following packages:
+Users can modify the chemfig code directly, such as changing the bond angle or functional groups. Every modification is immediately reflected in the PDF viewer.
 
-* [Flask](http://flask.pocoo.org/) -  ```pip install Flask ```
+## Installation
 
-* [Pubchempy](https://github.com/mcs07/PubChemPy) - ```pip install pubchempy```
+To run Mol2chemfig Web locally, the following packages need to be installed:
 
-* Python-indigo  - ```sudo apt-get install python-indigo```
+- [Flask](https://flask.palletsprojects.com/en/stable/) - `pip install Flask`
+- [Pubchempy](pubchempy.readthedocs.io) - `pip install pubchempy`
+- Indigo - `pip install epam.indigo`
+- Pdflatex
 
-* Pdflatex
+Additionally, you'll need to update the path to the **mol2chemfig.sty** file (defined as `m2pkg_path` in `mol2chemfig/pdfgen.py`) for the PDF generation process.
 
-Also, you will need to modify a path to mol2chemfig.sty file (m2pkg_path in mol2chemfig/pdfgen.py) in order to get a pdf file generated. 
+## Acknowledgments
 
-##### Acknowledgments
+I would like to acknowledge the authors of the following programs/libraries used in developing this web interface:
 
-I would like to acknowledge the work of all the authors of programs/libraries (Chemfig, Mol2chemfig, ChemDoodle Web Components, PubchemPy, Indigo) I used to develop the web interface.
+- **Chemfig**  
+- **Mol2chemfig**  
+- **ChemDoodle Web Components**  
+- **PubchemPy**  
+- **Indigo**
 
-##### License
+## License
 
-Mol2chemfig Web (web interface only) is licensed under version 3 of the [GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/gpl-3.0.html)
+Mol2chemfig Web (web interface only) is licensed under version 3 of the [GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/gpl-3.0.html).
 
-##### Comments/suggestions/bug reports
+## Comments, Suggestions, and Bug Reports
 
-Comments, suggestions, bug reports and constructive critic are very welcomed and can be sent to py.chemist@gmail.com
+Your feedback, suggestions, bug reports, and constructive criticism are highly appreciated. Please send them to:  
+**Email**: [Youssef Adly](youssefadly237@gmail.com)

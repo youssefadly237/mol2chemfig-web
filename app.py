@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for, request, jsonify
+from flask import Flask, render_template, url_for, request, jsonify, redirect
+
 from chemistry.chemfig import smiles_mol_to_chemfig, get_name, update_chemfig
 import os
 
@@ -68,7 +69,11 @@ def chemfig_update():
     smiles_mol = request.args.get("smiles_mol")
     pdflink = update_chemfig(smiles_mol)         
     return jsonify(pdf_link = pdflink)
-    
+
+@app.route('/')
+def index():
+    return redirect(url_for('home'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
