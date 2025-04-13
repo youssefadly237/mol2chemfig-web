@@ -53,3 +53,14 @@ Mol2chemfig Web (web interface only) is licensed under version 3 of the [GNU GEN
 
 Your feedback, suggestions, bug reports, and constructive criticism are highly appreciated. Please send them to:  
 **Email**: [Youssef Adly](youssefadly237@gmail.com)
+
+## Attention
+
+This is an old repository that I have cloned to improve; this markdown is not yet updated.
+
+## Plan
+
+- Update the web interface to support the latest versions of dependencies.
+- Refactor the codebase for improved maintainability.
+- Enhance the user interface for a better user experience.
+- Add naming to what you have drawn.
